@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spin Ex</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqu8NDXKMX84KggsridbbigxwRKLGqEVE"></script>
+  <script>
+    function initMap() {
+      var leninogorsk = { lat: 54.596, lng: 52.442 }; // Координаты Лениногорска
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: leninogorsk
+      });
+      
+      // Маркер для города Лениногорск
+      var marker = new google.maps.Marker({
+        position: leninogorsk,
+        map: map
+      });
+
+      // Круг, обводящий Лениногорск
+      var cityCircle = new google.maps.Circle({
+        strokeColor: "#007BFF", // Цвет контура
+        strokeOpacity: 0.8,     // Прозрачность контура
+        strokeWeight: 2,        // Толщина линии
+        fillColor: "#007BFF",   // Цвет заливки
+        fillOpacity: 0.1,       // Прозрачность заливки
+        map: map,
+        center: leninogorsk,
+        radius: 4500 // Радиус окружности в метрах (5 км)
+      });
+    }
+  </script>
+</head>
+<body onload="initMap()">
+  <header>
+    <img src="/images/7imJMJQ.png" alt="Spin Ex Logo" class="logo">
+    <h1>Spin Ex. Электросамокаты в вашем городе</h1>
+    <div class="app-buttons">
+        <a href="#" class="app-store-btn">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+        </a>
+        <a href="#" class="google-play-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+        </a>
+      </div>
+  </header>
+
+  <section class="features">
+    <div class="feature">
+      <h2>Удобство</h2>
+      <p>Простой интерфейс для аренды самокатов.</p>
+    </div>
+    <div class="feature">
+      <h2>Безопасность</h2>
+      <p>Контроль скорости и шлемы в комплекте.</p>
+    </div>
+    <div class="feature">
+      <h2>Доступность</h2>
+      <p>Самокаты доступны в разных точках города.</p>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2>Как это работает?</h2>
+    <ol>
+      <li>Скачайте приложение</li>
+      <li>Найдите самокат на карте</li>
+      <li>Начните поездку</li>
+    </ol>
+  </section>
+
+  <section class="map">
+    <h2>Найдите ближайший самокат</h2>
+    <div id="map" style="width: 100%; height: 400px;"></div>
+  </section>
+
+  <footer>
+    <form action="/send-email" method="post">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваш Email" required>
+        <textarea name="message" placeholder="Ваше сообщение"></textarea>
+        <button type="submit">Отправить</button>
+    </form>      
+    <p>© 2024 Spin Ex</p>
+  </footer>
+</body>
+</html>
