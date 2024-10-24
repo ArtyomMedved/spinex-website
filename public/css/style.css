@@ -169,3 +169,31 @@ footer p {
         font-size: 1.2em; /* Уменьшение размера заголовка для мобильных */
     }
 }
+
+.donate-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+/* Стиль контейнера для прогресс-бара */
+.progress-bar-container {
+    width: 50%; /* Ширина контейнера */
+    height: 20px; /* Высота контейнера */
+    background-color: #e0e0e0; /* Цвет фона контейнера */
+    border-radius: 10px; /* Закругленные углы */
+    overflow: hidden; /* Для предотвращения выхода прогресс-бара за пределы контейнера */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Внутренняя тень для объема */
+    margin: 20px auto; /* Центрирование по горизонтали через auto */
+  }
+
+/* Стиль для самого прогресс-бара */
+.progress-bar {
+    height: 100%; /* Высота прогресс-бара равна высоте контейнера */
+    background-color: #007bff; /* Основной цвет прогресс-бара */
+    border-radius: 10px; /* Закругленные углы */
+    transition: width 0.4s ease; /* Анимация изменения ширины */
+  }
+  

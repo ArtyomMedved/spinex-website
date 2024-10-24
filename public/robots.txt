@@ -1,0 +1,4 @@
+User-agent: 
+Crawl-delay: 1
+Host: spinexcursions.ru
+Sitemap: https://spinexcursions.ru/sitemap.xml

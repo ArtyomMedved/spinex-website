@@ -3,8 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spin Ex</title>
+  <title>Аренда электросамокатов в Лениногорске - Spin Ex</title>
+  
+  <meta name="description" content="Аренда электросамокатов Spin Ex в Лениногорске. Удобно, безопасно, доступно. Найдите ближайший самокат в нашем приложении.">
+  <meta name="keywords" content="аренда самокатов, электросамокаты, Лениногорск, прокат, аренда, Spin Ex">
+  
+  <!-- Канонический URL -->
+  <link rel="canonical" href="https://spinexcursions.ru">
+
+  <!-- OpenGraph разметка -->
+  <meta property="og:title" content="Аренда электросамокатов Spin Ex">
+  <meta property="og:description" content="Аренда электросамокатов в Лениногорске. Удобство, безопасность и доступность с приложением Spin Ex.">
+  <meta property="og:image" content="/images/7imJMJQ.png">
+  <meta property="og:url" content="https://spinexcursions.ru">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" href="/images/7imJMJQ.png">
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+     m[i].l=1*new Date();
+     for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+     ym(98716554, "init", {
+          clickmap:true,
+          trackLinks:true,
+          accurateTrackBounce:true
+     });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/98716554" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
   <link rel="stylesheet" href="/css/style.css">
+  
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqu8NDXKMX84KggsridbbigxwRKLGqEVE"></script>
   <script>
     function initMap() {
@@ -36,17 +70,30 @@
 </head>
 <body onload="initMap()">
   <header>
-    <img src="/images/7imJMJQ.png" alt="Spin Ex Logo" class="logo">
+    <img src="/images/7imJMJQ.png" alt="Логотип Spin Ex - аренда электросамокатов" class="logo">
     <h1>Spin Ex. Электросамокаты в вашем городе</h1>
     <div class="app-buttons">
         <a href="#" class="app-store-btn">
-          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Скачать в App Store">
         </a>
         <a href="#" class="google-play-btn">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Скачать в Google Play">
         </a>
       </div>
   </header>
+
+  <!-- Раздел для отображения прогресса сбора средств -->
+  <section class="fundraising">
+    <h2>Поддержите нас</h2>
+    <p>Мы собираем средства для публикации наших приложений. Поддержите нас и помогите сделать наш сервис доступным для всех!</p>
+    <a href="https://www.tbank.ru/cf/4pMdZ3NB4qa" target="_blank" class="donate-button">Поддержать</a>
+    
+    <!-- Шкала прогресса -->
+    <div class="progress-bar-container">
+      <div class="progress-bar" style="width: <%= (progress.collected / progress.target) * 100 %>%;"></div>
+    </div>
+    <p>Собрано: <%= progress.collected %> из <%= progress.target %> руб.</p>
+  </section>
 
   <section class="features">
     <div class="feature">
